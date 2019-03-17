@@ -8,7 +8,7 @@ import java.util.Set;
 /**
  * 给定一个字符串，请你找出其中不含有重复字符的 最长子串 的长度。
  */
-public class lengthOfLongestSubstring {
+public class LengthOfLongestSubstring {
     public int lengthOfLongestSubstring(String s) {
         HashSet<Character> characters = new HashSet<Character>(s.length());
 
@@ -25,10 +25,8 @@ public class lengthOfLongestSubstring {
                 if (lastLen > max) {
                     max = lastLen;
                 }
-                //System.out.println(characters.toString() + " " + max);
-                characters.clear();
 
-                //System.out.printf("lastLen:%d, k:%d \n", lastLen, k);
+                characters.clear();
                 k = k - lastLen + 1;
                 continue;
             }
@@ -46,7 +44,7 @@ public class lengthOfLongestSubstring {
     public static void main(String[] args) {
         String s = "";
 
-        int out = new lengthOfLongestSubstring().lengthOfLongestSubstring(s);
+        int out = new LengthOfLongestSubstring().lengthOfLongestSubstring(s);
         System.out.println(out);
     }
 }
