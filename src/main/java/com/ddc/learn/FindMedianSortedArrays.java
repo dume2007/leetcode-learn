@@ -7,6 +7,13 @@ import java.util.Arrays;
  请你找出这两个有序数组的中位数，并且要求算法的时间复杂度为 O(log(m + n))。
  */
 public class FindMedianSortedArrays {
+
+    /**
+     * 先合并再排序，然后奇数取中间值，偶数取中间两个值的平均数...
+     * @param nums1
+     * @param nums2
+     * @return
+     */
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int[] merge = new int[nums1.length + nums2.length];
         System.arraycopy(nums1, 0, merge, 0, nums1.length);
